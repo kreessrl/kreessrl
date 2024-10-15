@@ -24,8 +24,8 @@
                 </ul>
                 
                 <form action="" class="nav__form" autocomplete="off">
-                    <input type="text" placeholder="Buscar..." id="input_busqueda">
-                    <input type="submit" value="Buscar" id="boton_buscar">
+                    <input type="text" placeholder="Buscar..." id="input_busqueda" onclick="redirirgir()">
+                    <input type="submit" value="Buscar" id="boton_buscar" onclick="redirirgir()">
                 </form>
                 
             </nav>
@@ -70,6 +70,11 @@
         </main>
         <!-- Footer -->
     </div>
-    <script src=""></script>
+    <script>
+        function redirirgir() {
+            event.preventDefault();
+            window.location.href = "HTML/tienda.html"
+        }
+    </script>
 </body>
 </html>

@@ -43,7 +43,7 @@
 }
 
 .main__contenedor-categorias button:hover {
-    background-color: rgba(37, 37, 37, 0.507);
+    background-color: rgba(114, 114, 114, 0.678);
     cursor: pointer;
 }
 
@@ -58,15 +58,23 @@
 }
 
 #contenedor_resultados div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 260px;
     max-width: 260px; /* Hacer que sea adaptable */
 
     height: 280px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 20px;
+    background-color: rgba(243, 243, 243, 0.637);
     margin: 10px;
 
     padding: 10px;
+}
+
+#contenedor_resultados div p {
+    padding: 4px;
+    background-color: rgba(214, 214, 214, 0.856);
+    width: 100%;
 }
 
 #contenedor_resultados p {
@@ -141,4 +149,146 @@
         font-size: 1.6em;
         border-radius: 16px;
     }
+}
+
+/* Estilos para la vista normal del producto */
+.producto-caja {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animación al hacer hover */
+    cursor: pointer;
+}
+.producto-caja:hover {
+    transform: scale(1.05); /* Aumentar ligeramente al hacer hover */
+}
+
+/* Fondo para el popup */
+.fondo-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px; /* Espacio para móviles */
+    box-sizing: border-box;
+}
+
+/* Contenedor del producto ampliado */
+.producto-popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* Imagen del producto */
+.imagen-producto {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Botón para cerrar el popup */
+.boton-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.boton-cerrar:hover {
+    background-color: #ff3b3b;
+}
+
+/* Estilos para adaptabilidad en móviles */
+@media (max-width: 768px) {
+    .producto-popup {
+        max-width: 90%; /* Reducir tamaño en pantallas más pequeñas */
+        padding: 10px;
+    }
+    
+    .producto-caja {
+        width: 100%; /* Adaptar productos a pantalla completa en móvil */
+        height: auto;
+    }
+    
+    .boton-cerrar {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* Estilos para la vista normal del producto */
+.producto-caja {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Posición relativa para overlay */
+    transition: transform 0.3s ease; /* Animación al hacer hover */
+    cursor: pointer;
+}
+.producto-caja:hover {
+    transform: scale(1.05); /* Aumentar ligeramente al hacer hover */
+}
+
+/* Fondo para el overlay de producto agotado */
+.producto-agotado-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.6); /* Gris transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Para que quede por encima */
+
+}
+
+/* Texto de producto agotado */
+.producto-agotado-texto {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para el nombre y marca del producto con filtro */
+.producto-nombre {
+    font-size: 1.25em;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7)); /* Filtro para resaltar texto */
+}
+
+.producto-marca {
+    font-size: 1em;
+    color: rgb(242, 129, 40);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7)); /* Filtro para resaltar texto */
 }
