@@ -1,0 +1,55 @@
+.main__contenedor {
+    width: 100%;
+    height: max-content;
+    background-color: rgba(202, 202, 202, 0.199);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_nuevos_productos {
+    margin-top: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(223, 223, 223, 0.884);
+}
+
+.caja_producto {
+    
+    width: 260px;
+    height: 280px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    margin: 10px;
+
+    padding: 10px;
+}
+
+hr {
+    width: 100%;
+}
+
+.cajas {
+    margin: 10px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+.info_nuevos_productos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info_nuevos_productos p {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: rgb(40, 45, 87);
+}
