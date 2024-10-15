@@ -4,7 +4,7 @@
 
 body {
     background-color: rgb(27, 30, 54);
-    background-image: url(../IMG/Fondo/fondo_de_pantalla_krees_2.png);
+    background-image: url(../IMG/Fondo/fondo_de_pantalla_krees_2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -29,11 +29,11 @@ body {
 }
 
 .info_2_contenedor {
-    background-image: url(../IMG/Fondo/fondo_acerca_de_krees_2.png);
+    background-image: url(../IMG/Fondo/fondo_acerca_de_krees_2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50%;
+    width: 80%;
 }
 
 .info_2_contenedor__borrador {

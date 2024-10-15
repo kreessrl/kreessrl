@@ -53,3 +53,13 @@ hr {
     font-weight: 900;
     color: rgb(40, 45, 87);
 }
+
+@media (max-width: 550px) {
+    .contenedor_nuevos_productos {
+        margin-top: 90%;
+    }
+
+    .info_nuevos_productos p {
+        font-size: 1.6em;
+    }
+}

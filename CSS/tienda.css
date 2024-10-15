@@ -37,7 +37,7 @@
     color: white;
     font-size: 2em;
     font-weight: 700;
-    background-color: rgba(36, 36, 36, 0.849);
+    background-color: rgba(26, 26, 26, 0.904);
     border-radius: 20px;
     border: none;
 }
@@ -76,4 +76,13 @@
 .producto_span {
     font-size: 1em;
     color: rgb(242, 129, 40);
+}
+
+@media (max-width: 800px){
+    .main__contenedor-categorias button{
+        margin: 6px;
+        padding: 6px;
+        font-size: 1.6em;
+        border-radius: 16px;
+    }
 }
