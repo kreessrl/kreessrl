@@ -34,7 +34,7 @@ hr {
 
 .contacto_contenedor {
     margin-top: 20px;
-    width: 72%;
+    width: 90%;
     height: 72%;
     background-color: rgba(212, 222, 223, 0.911);
     display: flex;
@@ -81,12 +81,16 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: start;
-        margin-top: 10px;
+        margin-top: 16px;
     }
 }
 
 @media (max-width: 760px) {
-    .numeros p, .direccion p {
+    .numeros p {
         font-size: 1.8em;
+    }
+
+    .direccion p {
+        font-size: 1.5em;
     }
 }

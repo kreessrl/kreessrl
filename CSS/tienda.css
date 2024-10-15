@@ -26,9 +26,9 @@
 }
 
 .main__contenedor-categorias {
+    margin-top: 2vh;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 .main__contenedor-categorias button{
@@ -54,6 +54,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     background-color: rgba(0, 0, 0, 0.384);
+    margin-top: 2vh;
 }
 
 #contenedor_resultados div {
@@ -76,6 +77,61 @@
 .producto_span {
     font-size: 1em;
     color: rgb(242, 129, 40);
+}
+
+.main__contenedor-categorias input{
+    display: none;
+}
+
+.main__contenedor-categorias label{
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.6em;
+    font-weight: 700;
+    background-color: rgb(242, 129, 40);
+    color: rgb(27, 30, 54);
+    border-radius: 20px;
+    border: 2px solid rgb(182, 182, 182);
+}
+
+.main__contenedor-categorias label:hover{
+    background-color: rgb(241, 152, 84);
+    color: rgb(27, 30, 54);
+    cursor: pointer;
+}
+
+.main__contenedor-categorias label:focus{
+    background-color: rgb(241, 152, 84);
+    color: rgb(27, 30, 54);
+    cursor: pointer;
+}
+
+.contenedor_ferreteria {
+    margin-top: 2vh;
+    display: none;
+    position: static;
+}
+
+.contenedor_automotriz {
+    margin-top: 2vh;
+    display: none;
+    position: static;
+}
+
+#radio_1:checked ~ .contenedor_ferreteria{
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#radio_2:checked ~ .contenedor_automotriz{
+    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 800px){

@@ -33,7 +33,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 80%;
+    width: 60%;
 }
 
 .info_2_contenedor__borrador {
@@ -84,4 +84,14 @@ body {
 .footer p{
     color: rgb(255, 255, 255);
 
+}
+
+@media (max-width: 932px) {
+    .info_2_contenedor {
+        
+        width: 90%;
+    }
+    .info_1_contenedor {
+        width: 80%;
+    }
 }
