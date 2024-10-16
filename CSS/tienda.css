@@ -43,7 +43,12 @@
 }
 
 .main__contenedor-categorias button:hover {
-    background-color: rgba(114, 114, 114, 0.678);
+    background-color: rgba(107, 107, 107, 0.795);
+    cursor: pointer;
+}
+
+.main__contenedor-categorias button:focus {
+    background-color: rgba(107, 107, 107, 0.795);
     cursor: pointer;
 }
 
@@ -57,23 +62,8 @@
     margin-top: 2vh;
 }
 
-#contenedor_resultados div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 260px;
-    max-width: 260px; /* Hacer que sea adaptable */
-
-    height: 280px;
-    background-color: rgba(243, 243, 243, 0.637);
-    margin: 10px;
-
-    padding: 10px;
-}
-
 #contenedor_resultados div p {
     padding: 4px;
-    background-color: rgba(214, 214, 214, 0.856);
     width: 100%;
 }
 
@@ -95,16 +85,36 @@
     margin: 20px;
     padding: 10px;
     font-size: 1.6em;
-    font-weight: 700;
-    background-color: rgb(242, 129, 40);
-    color: rgb(27, 30, 54);
+    font-weight: 900;
+    color: rgb(255, 255, 255);
     border-radius: 20px;
     border: 2px solid rgb(182, 182, 182);
+    
+}
+
+.main__contenedor-categorias label span {
+    font-size: 1em;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: #00000085;
+}
+
+.c_radio_1 {
+    background-image: url(../IMG/ferreteria.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+
+.c_radio_2 {
+    background-image: url(../IMG/automotriz.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 110%;
 }
 
 .main__contenedor-categorias label:hover{
-    background-color: rgb(241, 152, 84);
-    color: rgb(27, 30, 54);
+    color: rgb(189, 189, 189);
     cursor: pointer;
 }
 
@@ -143,6 +153,13 @@
 }
 
 @media (max-width: 800px){
+
+    .main__contenedor-categorias label{
+        margin: 10px;
+        padding: 10px;
+        
+    }
+
     .main__contenedor-categorias button{
         margin: 6px;
         padding: 6px;
@@ -153,18 +170,63 @@
 
 /* Estilos para la vista normal del producto */
 .producto-caja {
-    width: 200px;
-    height: 150px;
+    width: 22vw;
+
+    height: 50vh;
     margin: 10px;
-    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Animación al hacer hover */
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #dfdfdf;
+}
+
+@media (max-width:1000px) {
+    .producto-caja {
+        width: 30vw;
+    
+        height: 50vh;
+    }
+}
+
+@media (max-width:750px) {
+    .producto-caja {
+        width: 45vw;
+    
+        height: 50vh;
+    }
+}
+
+@media (max-width:450px) {
+    .producto-caja {
+        width: 60vw;
+    
+        height: 40vh;
+    }
+    .main__contenedor-categorias button{
+        margin: 4px;
+        padding: 6px;
+        font-size: 1.5em;
+        border-radius: 16px;
+    }
 }
 .producto-caja:hover {
     transform: scale(1.05); /* Aumentar ligeramente al hacer hover */
+}
+
+.caja-secundaria {
+    background-color: rgba(223, 223, 223, 0.808);
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 /* Fondo para el popup */
@@ -230,65 +292,8 @@
         padding: 10px;
     }
     
-    .producto-caja {
-        width: 100%; /* Adaptar productos a pantalla completa en móvil */
-        height: auto;
-    }
-    
     .boton-cerrar {
         top: 5px;
         right: 5px;
     }
-}
-
-/* Estilos para la vista normal del producto */
-.producto-caja {
-    width: 200px;
-    height: 150px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Posición relativa para overlay */
-    transition: transform 0.3s ease; /* Animación al hacer hover */
-    cursor: pointer;
-}
-.producto-caja:hover {
-    transform: scale(1.05); /* Aumentar ligeramente al hacer hover */
-}
-
-/* Fondo para el overlay de producto agotado */
-.producto-agotado-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(128, 128, 128, 0.6); /* Gris transparente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10; /* Para que quede por encima */
-
-}
-
-/* Texto de producto agotado */
-.producto-agotado-texto {
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Estilos para el nombre y marca del producto con filtro */
-.producto-nombre {
-    font-size: 1.25em;
-    font-weight: 700;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7)); /* Filtro para resaltar texto */
-}
-
-.producto-marca {
-    font-size: 1em;
-    color: rgb(242, 129, 40);
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7)); /* Filtro para resaltar texto */
 }
