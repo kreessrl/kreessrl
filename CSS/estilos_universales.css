@@ -315,8 +315,8 @@ img {
     }
 
     .nav__ul-li a {
-        font-size: 1.6em;
+        font-size: 1.7em;
         padding: 2px 8px;
-
+        box-shadow: 0 0 8px black;
     }
 }
