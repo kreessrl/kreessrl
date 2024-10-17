@@ -297,3 +297,10 @@
         right: 5px;
     }
 }
+
+
+@media (max-height: 450px) {
+    .main__contenedor-categorias {
+        margin-top: 16px;
+    }
+}

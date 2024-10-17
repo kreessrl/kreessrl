@@ -116,16 +116,21 @@ img {
     font-size: 2em;
     font-weight: 700;
     color: rgb(27, 30, 54);
-
-    background-color: rgba(27, 30, 54, 0.192);
+    box-shadow: 0 0 10px black;
+    background-color: rgba(194, 195, 207, 0.712);
     padding: 4px 10px;
     border-radius: 40px;
 }
 
 .nav__ul-li a:hover {
-    background-color: rgba(132, 137, 172, 0.315);
+    background-color: rgba(235, 236, 241, 0.904);
+    box-shadow: 0 0 16px rgb(39, 39, 39);
+}
 
-    text-decoration: underline;
+.nav__ul-li a:active {
+    background-color: rgba(194, 195, 207, 0.712);
+    -webkit-tap-highlight-color: transparent;
+    
 }
 
 .nav__ul-li a:focus {
