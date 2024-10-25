@@ -21,7 +21,7 @@ let productosTotales = [
 
     new Producto(201, "Neumático Delantero 500*8", "$", "14 346.41$", "No Registrado", "neumaticos", 0, "IMG/Automotriz/neumatico.jpg"),
     
-    new Producto(1, "Bateria 12V 200AH", "330.00$", "131 769.10$", "No Registrada", "baterias", 0),
+    new Producto(1, "Bateria 12V 200AH", "330.00$", "131 769.10$", "No Registrada", "baterias", 0, "IMG/Automotriz/bateria.jpg"),
 
     new Producto(101, "Bombin de Petroleo", "26.69$", "9 609.88$", "Pendiente", "filtros", 15),
 
@@ -51,7 +51,7 @@ function mostrarProductos(productos) {
         if (producto.imagen) {
             cajaContenedora.style.backgroundImage = `url(${producto.imagen})`;
             cajaContenedora.style.backgroundSize = "cover";  // Para ajustar la imagen al contenedor
-            cajaContenedora.style.backgroundPosition = "center"; // Centrar la imagen
+            cajaContenedora.style.backgroundPosition = "center center"; // Centrar la imagen
         }
 
         if (this.cantidad == 0) {

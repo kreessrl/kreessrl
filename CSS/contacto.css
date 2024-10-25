@@ -24,7 +24,7 @@ hr {
 }
 
 .contacto_info p{
-    width: 15%;
+    width: max-content;
     font-size: 2.5em;
     font-weight: 900;
     color: rgb(255, 255, 255);
