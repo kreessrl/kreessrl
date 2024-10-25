@@ -176,14 +176,17 @@ img {
 }
 
 #boton_buscar {
-    background-color: rgb(27, 30, 54);
-    border-radius: 20px;
-    color: white;
-    padding: 4px;
+    width: 20%;
+    height: 80%;
+    border: none;
+    background-color: transparent;
+    background-image: url(../IMG/lupa.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
 
 #boton_buscar:hover {
-    background-color: rgb(40, 45, 87);
     cursor: pointer;
 }
 

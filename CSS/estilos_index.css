@@ -109,12 +109,33 @@ hr {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 242, 223);
+}
+
+.info__caja2 {
+    width: 5%;
+    height: 80%;
+    background-image: url(../IMG/caja2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.info__caja1 {
+    width: 5%;
+    height: 100%;
+    background-image: url(../IMG/caja1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .info_nuevos_productos p {
     font-size: 2.5em;
     font-weight: 900;
-    color: rgb(40, 45, 87);
+    color: rgb(242, 129, 40);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 @media (max-width: 750px) {
