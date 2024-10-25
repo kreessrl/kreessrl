@@ -1,6 +1,6 @@
 function redirirgir(){
     event.preventDefault();
-    window.location.href = "tienda.html"
+    window.location.href = "HTML/tienda.html"
 }
 
 class Producto {
