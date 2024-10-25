@@ -341,3 +341,49 @@ hr {
 .oferta_span {
     text-decoration: line-through;
 }
+
+.mensaje_seguridad {
+    position: absolute;
+    margin-top: 84%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.mensaje_seguridad__contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: rgb(255, 242, 223);
+}
+
+.mensaje_seguridad__contenedor p {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.seguridad_img_1 {
+    width: 2%;
+    background-image: url(../IMG/camion.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.seguridad_img_2 {
+    width: 2%;
+    background-image: url(../IMG/candado.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.seguridad_img_3 {
+    width: 2%;
+    background-image: url(../IMG/tarjeta.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
