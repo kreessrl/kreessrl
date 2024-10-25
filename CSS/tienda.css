@@ -18,10 +18,30 @@
     justify-content: center;
 }
 
+.info_img_1 {
+    width: 20%;
+    height: auto;
+    background-image: url(../IMG/auto1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.info_img_2 {
+    width: 20%;
+    height: auto;
+    background-image: url(../IMG/auto2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .main__contenedor-info p {
+    text-align: center;
     font-size: 2.5em;
     font-weight: 900;
     color: rgb(40, 45, 87);
+    width: 60%;
 }
 
 .main__contenedor-categorias {
