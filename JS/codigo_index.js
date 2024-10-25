@@ -21,9 +21,7 @@ let productosTotales = [
 
     new Producto(201, "Neumático Delantero 500*8", "$", "14 346.41$", "No Registrado", "neumaticos", 0, "IMG/Automotriz/neumatico.jpg"),
     
-    
     new Producto(1, "Bateria 12V 200AH", "330.00$", "131 769.10$", "No Registrada", "baterias", 0),
-
 
     new Producto(101, "Bombin de Petroleo", "26.69$", "9 609.88$", "Pendiente", "filtros", 15),
 
@@ -135,3 +133,60 @@ function buscarProducto(event) {
 }
 
 mostrarProductos(productosTotales)
+
+
+
+
+
+
+
+
+
+
+
+
+function abrirProductoEmergenteOferta() {
+    // Crear un contenedor de fondo para el "popup"
+    let fondoPopup = document.createElement("div");
+    fondoPopup.classList.add("fondo-popup");
+
+    // Crear el contenedor del producto ampliado
+    let productoAmpliado = document.createElement("div");
+    productoAmpliado.classList.add("producto-popup");
+
+    let producto = new Producto(201, "Neumático Delantero 500*8", "$", "14 346.41$", "No Registrado", "neumaticos", 0, "IMG/Automotriz/neumatico.jpg")
+
+    // Rellenar con toda la información del producto
+    let contenidoProducto = `
+        <p><span class="producto_span">ID:</span> ${producto.id}</p>
+        <p><span class="producto_span">Nombre:</span> ${producto.nombre}</p>
+        <p><span class="producto_span">Precio MLC:</span> ${producto.precio_mlc}</p>
+        <p><span class="producto_span">Precio CUP:</span> ${producto.precio_cup} | <span class="oferta_span">15 000.00$</span></p>
+        <p><span class="producto_span">Marca:</span> ${producto.marca}</p>
+        <p><span class="producto_span">Cantidad Disponible:</span> ${producto.cantidad}</p>`;
+
+
+    // Verificar si hay una imagen para mostrar
+    if (producto.imagen) {
+        contenidoProducto = `<img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-producto">` + contenidoProducto;
+    }
+
+    // Añadir contenido al contenedor del producto ampliado
+    productoAmpliado.innerHTML = contenidoProducto;
+
+    // Botón para cerrar el "popup"
+    let botonCerrar = document.createElement("button");
+    botonCerrar.textContent = "Cerrar";
+    botonCerrar.classList.add("boton-cerrar");
+    botonCerrar.addEventListener("click", () => {
+        document.body.removeChild(fondoPopup); // Elimina el popup
+    });
+
+    productoAmpliado.appendChild(botonCerrar);
+    fondoPopup.appendChild(productoAmpliado);
+    document.body.appendChild(fondoPopup); // Añadir el fondo del popup a la página
+}
+
+let oferta_avierta = document.getElementById("oferta_avierta_ID")
+let oferta = document.getElementById("oferta");
+oferta.addEventListener("click", abrirProductoEmergenteOferta)
