@@ -70,11 +70,17 @@ body {
     font-size: 2.5em;
     font-weight: 700;
     margin: auto;
-    color: white;
+    color: rgb(255, 255, 255);
 }
+.main_contendor_2_B {
+    width: 96%;
+    margin: auto;
+}
+
 .main_contendor_2_B p{
     font-size: 1.8em;
-    color: white;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(22, 22, 22);
 }
 .main_contendor_2_B__span {
     color: rgb(242, 129, 40);
